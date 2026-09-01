@@ -434,6 +434,28 @@
     background:var(--blue); color:#fff; font-size:0.75rem;
     padding:5px 10px; letter-spacing:0.05em;
   }
+  .map-link{
+    display:inline-flex; align-items:center; gap:6px;
+    margin-top:14px; margin-left:10px;
+    font-family:'IBM Plex Mono', monospace; font-size:0.75rem; font-weight:600;
+    color:var(--blue); text-decoration:none; letter-spacing:0.03em;
+    border-bottom:1px solid var(--blue);
+  }
+  .map-link:hover{color:var(--orange); border-color:var(--orange);}
+
+  /* ---------- WHATSAPP FLOAT ---------- */
+  .whatsapp-float{
+    position:fixed; bottom:24px; right:24px; z-index:150;
+    width:58px; height:58px; border-radius:50%;
+    background:#25D366; display:flex; align-items:center; justify-content:center;
+    box-shadow:0 4px 14px rgba(0,0,0,0.35);
+    transition:transform 0.15s ease;
+  }
+  .whatsapp-float:hover{transform:scale(1.08);}
+  .whatsapp-float svg{width:30px; height:30px;}
+  @media (max-width:600px){
+    .whatsapp-float{width:52px; height:52px; bottom:18px; right:18px;}
+  }
 
   /* ---------- CONTACT ---------- */
   .contact-panel{
@@ -648,6 +670,7 @@
           <h3>Tada</h3>
           <address>Achari Street, Tada Khandriga,<br>Tada, Andhra Pradesh</address>
           <span class="pincode mono">PIN 524401</span>
+          <a class="map-link" href="https://maps.app.goo.gl/NTcXrCC2nhmff4Sz8" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
         </div>
         <div class="branch-tag">
           <div class="hole"></div>
@@ -655,6 +678,7 @@
           <h3>Bandikavanoor</h3>
           <address>747R+98, near CSK Dhaba,<br>Bandikavanoor, Tamil Nadu</address>
           <span class="pincode mono">PIN 600067</span>
+          <a class="map-link" href="https://maps.app.goo.gl/ZnzYt6uWpTDYHbaD6" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
         </div>
       </div>
     </div>
@@ -690,6 +714,10 @@
           <li>
             <span class="ic">☎</span>
             <span><span class="sub">Call</span><a href="tel:+916305317014">+91 63053 17014</a></span>
+          </li>
+          <li>
+            <span class="ic">💬</span>
+            <span><span class="sub">WhatsApp</span><a href="https://wa.me/918333079843" target="_blank" rel="noopener noreferrer">+91 83330 79843</a></span>
           </li>
           <li>
             <span class="ic">✉</span>
@@ -809,6 +837,13 @@
   lightbox.addEventListener('click', (e) => { if(e.target === lightbox) closeLightbox(); });
   document.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeLightbox(); });
 </script>
+
+<a class="whatsapp-float" href="https://wa.me/918333079843" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+  <svg viewBox="0 0 32 32" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16.004 3C9.377 3 4 8.373 4 15c0 2.386.702 4.607 1.912 6.47L4 29l7.72-1.876A11.94 11.94 0 0 0 16.004 27C22.63 27 28 21.627 28 15S22.63 3 16.004 3zm0 21.818a9.78 9.78 0 0 1-4.986-1.363l-.358-.213-4.583 1.114 1.128-4.463-.234-.372A9.77 9.77 0 0 1 5.727 15c0-5.673 4.604-10.277 10.277-10.277S26.28 9.327 26.28 15 21.677 24.818 16.004 24.818z"/>
+    <path d="M21.1 17.573c-.298-.149-1.76-.868-2.033-.967-.273-.099-.472-.149-.67.15-.199.298-.769.966-.943 1.164-.174.199-.348.224-.646.075-.298-.149-1.257-.463-2.394-1.475-.885-.789-1.483-1.764-1.657-2.062-.174-.298-.019-.459.13-.607.134-.133.298-.348.447-.522.15-.174.199-.298.298-.497.099-.199.05-.373-.025-.522-.075-.149-.67-1.612-.918-2.208-.242-.581-.487-.502-.67-.512l-.571-.01c-.199 0-.522.075-.795.373-.273.298-1.04 1.016-1.04 2.479 0 1.463 1.065 2.876 1.213 3.075.149.199 2.096 3.2 5.08 4.489.71.306 1.263.489 1.694.626.712.227 1.36.195 1.872.118.571-.085 1.76-.72 2.008-1.414.248-.695.248-1.29.174-1.414-.075-.124-.273-.199-.571-.348z"/>
+  </svg>
+</a>
 
 </body>
 </html>
